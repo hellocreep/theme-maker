@@ -1,0 +1,42 @@
+.skin-panel {
+	position: fixed;
+	width: 300px;
+	top: 5px;
+}
+
+.skin-panel-content {
+
+}
+
+.skin-panel-trigger {
+	width: 33px;
+	position: absolute;
+	top: 150px;
+	left: 300px;
+}
+
+.panel-group h4 {
+	cursor: pointer;	
+}
+
+.accordion-content {
+	display: none
+}
+
+.panel-group.active .accordion-content {
+	display: block;
+}
+
+.panel-group-item {
+	margin-bottom: 20px;
+}
+
+.pre-color,
+.layout-pattern {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+	cursor: pointer;
+}
+

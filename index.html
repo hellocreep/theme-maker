@@ -12,31 +12,154 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/colpick.css">
+        <link rel="stylesheet" href="css/skin-panel.css">
+        <link rel="stylesheet" href="css/jquery.nouislider.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script data-main="js/main" src="js/vendor/require.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">Logo</a>
+            </div>
+        </nav>        
+        
+        <div class="jumbotron">
+            Banner
+        </div>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <div class="skin-panel">
+            <div class="skin-panel-content">
+                <ul class="list-group ">
+                    <li class="list-group-item panel-group">
+                        <h4>Backgroud Colors</h4>
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Backgroud image</div>
+                                <div class="col-md-7">
+                                    <button class="btn btn-default">Upload file</button>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Header Image</div>
+                                <div class="col-md-7">
+                                    <button class="btn btn-default">Upload file</button>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Background Gradient</div>
+                                <div class="col-md-7">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Theme Color</div>
+                                <div class="col-md-7">
+                                   <button id="picker" class="btn btn-sm btn-info">color</button> 
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Pre-defined Colors</div>
+                                <div class="col-md-7">
+                                   <div class="pre-color">1</div>
+                                   <div class="pre-color">2</div>
+                                   <div class="pre-color">3</div>
+                                   <div class="pre-color">4</div>
+                                   <div class="pre-color">5</div>
+                                   <div class="pre-color">6</div>
+                                   <div class="pre-color">7</div>
+                                   <div class="pre-color">8</div>
+                                   <div class="pre-color">9</div>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>Skin Layout</h4>
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                            <div class="col-md-6">
+                                <button class="btn btn-default">Boxed</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default">Streched</button>
+                            </div>
+                        </div>
+                        <div class="row panel-group-item">
+                            <div class="col-md-5">Patterns</div>
+                                <div class="col-md-7">
+                                   <div class="layout-pattern">1</div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                   <div class="layout-pattern"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Skin Width</div>
+                                <div class="col-md-7">
+                                   <div class="skin-width"></div>
+                                   <div class="skin-width-val"></div> 
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Width</div>
+                                <div class="col-md-7">
+                                    <div class="content-width"></div>
+                                    <div class="content-width-val"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Header Height</div>
+                                <div class="col-md-7">
+                                    <div class="header-height"></div>
+                                    <div class="header-height-val"></div>
+                                </div>
+                            </div>
+                        </div> 
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>Menu</h4>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>Banner</h4>
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>Container</h4>
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>Footer</h4>
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>DNN Tokens</h4>
+                    </li>
+                    <li class="list-group-item panel-group">
+                        <h4>Social Links</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="skin-panel-trigger">Tigger</div>
+        </div>
+        
     </body>
 </html>
