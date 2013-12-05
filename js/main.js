@@ -1,3 +1,5 @@
+'use strict';
+
 require.config({
 	baseUrl: 'js',
 	paths: {
@@ -22,59 +24,97 @@ require.config({
 });
 
 require([
-	'jquery',
-	'colpick',
-	'nouislider'
-],function($, colpick, noUiSlider) {
+	'theme_maker'
+],function(ThemeMaker) {
 
-	$('.panel-group h4').on('click', function() {
-		$(this).parent().addClass('active').siblings().removeClass('active');
-	});
+	// $('.panel-group h4').on('click', function() {
+	// 	$(this).parent().addClass('active').siblings().removeClass('active');
+	// });
 
-	$('.skin-panel-trigger').click(function() {
-		var offset = '-300px',
-			$this = $(this);
-		if($this.hasClass('hide-panel')) offset = 0;
-		$('.skin-panel').animate({
-			left: offset 
-		}, 1200, function() {
-			$this.toggleClass('hide-panel');
-		});
-	});
+	// $('.skin-panel-trigger').click(function() {
+	// 	var offset = '-300px',
+	// 		$this = $(this);
+	// 	if($this.hasClass('hide-panel')) offset = 0;
+	// 	$('.skin-panel').animate({
+	// 		left: offset 
+	// 	}, 800, function() {
+	// 		$this.toggleClass('hide-panel');
+	// 	});
+	// });
 
-	$('#picker').colpick();
+	// $('#picker').colpick();
 
-	$('.skin-width').noUiSlider({
-		range: [0, 1500],
-		start: 1000,
-		step: 10,
-		handles: 1,
-		slide: function() {
-			$('.skin-width-val').text($('.skin-width').val()*1 + 'px');
+	// $('.skin-width').noUiSlider({
+	// 	range: [0, 1500],
+	// 	start: 1000,
+	// 	step: 10,
+	// 	handles: 1,
+	// 	slide: function() {
+	// 		$('.skin-width-val').text($('.skin-width').val()*1 + 'px');
+	// 	}
+	// });
+
+	// $('.content-width').noUiSlider({
+	// 	range: [0, 1400],
+	// 	start: 1000,
+	// 	step: 10,
+	// 	handles: 1,
+	// 	slide: function() {
+	// 		$('.content-width-val').text($('.content-width').val()*1 + 'px');
+	// 	}
+	// });
+
+	// $('.header-height').noUiSlider({
+	// 	range: [0, 170],
+	// 	start: 100,
+	// 	step: 10,
+	// 	handles: 1,
+	// 	slide: function() {
+	// 		$('.header-height-val').text($('.header-height').val()*1 + 'px');
+	// 	}
+	// });
+
+	var themeMaker = new ThemeMaker({
+		backgroundImage: {
+			effectedTarget: []
+		},
+		headerImage: {
+			effectedTarget: []
+		},
+		backgroundGradient: {
+			effectedTarget: []
+		},
+		themeColor: {
+			effectedTarget: []
+		},
+		preColor: {
+			effectedTarget: []
+		},
+		boxed: {
+			effectedTarget: []
+		},
+		streched: {
+
+		},
+		patterns: {
+
+		},
+		skinWidth: {
+			effectedTarget: [],
+			range: [0, 1500],
+			start: 1000
+		},
+		contentWidth: {
+			effectedTarget: [],
+			range: [0, 1400],
+			start: 1000
+		},
+		headerHeight: {
+			effectedTarget: '.navbar',
+			range: [0, 170],
+			start: 100
 		}
 	});
-
-	$('.content-width').noUiSlider({
-		range: [0, 1400],
-		start: 1000,
-		step: 10,
-		handles: 1,
-		slide: function() {
-			$('.content-width-val').text($('.content-width').val()*1 + 'px');
-		}
-	});
-
-	$('.header-height').noUiSlider({
-		range: [0, 170],
-		start: 100,
-		step: 10,
-		handles: 1,
-		slide: function() {
-			$('.header-height-val').text($('.header-height').val()*1 + 'px');
-		}
-	});
-
-
 
 
 });
