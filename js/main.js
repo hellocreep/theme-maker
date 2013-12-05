@@ -38,7 +38,7 @@ require([
 			effectedTarget: []
 		},
 		themeColor: {
-			effectedTarget: []
+			effectedTarget: 'body'
 		},
 		preColor: {
 			effectedTarget: []
@@ -66,7 +66,79 @@ require([
 			effectedTarget: '.navbar',
 			range: [0, 170],
 			start: 100
+		},
+		titleSize: {
+			effectedTarget: '',
+			range: [12, 18],
+			start: 16,
+			step: 1
+		},
+		subtitleSize: {
+			effectedTarget: '',
+			range: [8, 16],
+			start: 14,
+			step: 1
+		},
+		titleColor: {
+			effectedTarget: ''
+		},
+		subtitleColor: {
+			effectedTarget: ''
+		},
+		titleFont: {
+			effectedTarget: ''
+		},
+		subtitleFont: {
+			effectedTarget: ''
+		},
+		bannerFontSize: {
+			effectedTarget: ''	
+		},
+		bannerColor: {
+			effectedTarget: ''
+		},
+		bannerFont: {
+			effectedTarget: ''
+		},
+		// Container
+		tileFontSize: {
+			effectedTarget: ''
+		},
+		contentFontSize: {
+			effectedTarget: ''
+		},
+		contentTitleFontSize: {
+			effectedTarget: ''
+		},
+		contentColor: {
+			effectedTarget: ''
+		},
+		contentTitleFont: {
+			effectedTarget: ''	
+		},
+		contentFont: {
+			effectedTarget: ''
+		},
+		// Footer
+		tileFooterSize: {
+			effectedTarget: ''
+		},
+		footerFontSize: {
+			effectedTarget: ''
+		},
+		footerTileColor: {
+			effectedTarget: ''
+		},
+		footerContentColor: {
+			effectedTarget: ''
+		},
+		footerTileFont: {
+			effectedTarget: ''
+		},
+		footerContentFont: {
+			effectedTarget: ''
 		}
+
 	});
 
 });

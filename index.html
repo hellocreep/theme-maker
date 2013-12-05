@@ -71,7 +71,7 @@
                             <div class="row panel-group-item">
                                 <div class="col-md-5">Theme Color</div>
                                 <div class="col-md-7">
-                                   <button id="picker" class="btn btn-sm btn-info">color</button> 
+                                   <button class="btn btn-sm btn-info theme-color">color</button> 
                                 </div>
                             </div>
                             <div class="row panel-group-item">
@@ -140,22 +140,222 @@
                     </li>
                     <li class="list-group-item panel-group">
                         <h4 class="list-title">Menu</h4>
-
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title size</div>
+                                <div class="col-md-7">
+                                    <div class="title-size"></div>
+                                    <div class="title-size-val"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Subtitle size</div>
+                                <div class="col-md-7">
+                                    <div class="subtitle-size"></div>
+                                    <div class="subtitle-size-val"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title color</div>
+                                <div class="col-md-7">
+                                    <button class="btn btn-sm btn-info title-color">color</button>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Subtitle color</div>
+                                <div class="col-md-7">
+                                    <button class="btn btn-sm btn-info subtitle-color">color</button>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title font</div>
+                                <div class="col-md-7">
+                                    <select name="title-font">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Subtitle font</div>
+                                <div class="col-md-7">
+                                    <select name="title-font">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item panel-group">
                         <h4 class="list-title">Banner</h4>
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Banner Font Size</div>
+                                <div class="col-md-7">
+                                    <div class="banner-font-size"></div>
+                                    <div class="banner-font-size-val"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Banner Color</div>
+                                <div class="col-md-7">
+                                    <button class="btn btn-info btn-sm banner-color">color</button>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Banner Font</div>
+                                <div class="col-md-7">
+                                    <select name="banner-font">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item panel-group">
                         <h4 class="list-title">Container</h4>
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Tile Font Size</div>
+                                <div class="col-md-7">
+                                    <div class="tile-font-size"></div>
+                                    <div class="tile-font-size-val"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Font Size</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title Color</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Color</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title Font</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Font</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                        </div>
+                        
                     </li>
                     <li class="list-group-item panel-group">
                         <h4 class="list-title">Footer</h4>
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Tile Font Size</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Font Size</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title Color</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Color</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Title Font</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-5">Content Font</div>
+                                <div class="col-md-7"></div>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item panel-group">
                         <h4 class="list-title">DNN Tokens</h4>
+                        <div class="accordion-content">
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                            <div class="row panel-group-item">
+                                <div class="col-md-2 relative">
+                                    <input type="checkbox">
+                                    <div class="col-md-10"></div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item panel-group">
                         <h4 class="list-title">Social Links</h4>
+                        <div class="accordion-content">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-md-5">Facebook</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-5">Twitter Link</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </li>
                 </ul>
             </div>
