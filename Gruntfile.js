@@ -294,6 +294,52 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    appDir: 'js',
+                    baseUrl: './',
+                    dir: 'js-build',
+                    paths: {
+                        /* Vendor */
+                        jquery: 'vendor/jquery-1.10.2.min',
+                        colpick: 'vendor/colpick',
+                        nouislider: 'vendor/jquery.nouislider',
+                        underscore: 'vendor/underscore',
+                        icheck: 'vendor/jquery.icheck',
+                        text: 'vendor/text',
+
+                        /* Modules */
+                        theme_maker: 'modules/theme-maker'
+                    },
+                    shim: {
+                       shim: {
+                            colpick: {
+                                exports: 'colpick',
+                                deps: ['jquery']
+                            },
+                            slider: {
+                                exports: 'noUiSlider',
+                                deps: ['jquery']
+                            },
+                            underscore: {
+                                exports: '_'
+                            },
+                            icheck: {
+                                exports: 'iCheck',
+                                deps: ['jquery']
+                            }
+                        }
+                    },
+                    modules: [
+                        {
+                            name: 'main',
+                            include: ['theme_maker']
+                        }
+                    ]
+                }
+            }
         }
     });
 
@@ -343,4 +389,6 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('requirejs', ['requirejs'])
 };

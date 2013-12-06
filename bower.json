@@ -8,7 +8,8 @@
     "nouislider": "~5.0.0",
     "font-awesome": "~4.0.3",
     "requirejs": "~2.1.9",
-    "jquery-icheck": "*"
+    "jquery-icheck": "*",
+    "underscore": "1.5.2"
   },
   "devDependencies": {}
 }

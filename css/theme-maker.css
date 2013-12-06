@@ -30,6 +30,10 @@
 	padding-bottom: 5px;
 }
 
+.panel-group.active {
+	background: #f0f0f0;
+}
+
 .panel-group .list-title {
 	cursor: pointer;	
 }
@@ -43,10 +47,10 @@
 }
 
 .panel-group-item {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
-.pre-color,
+.theme-pre-color,
 .layout-pattern {
 	float: left;
 	width: 30px;
