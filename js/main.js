@@ -19,7 +19,7 @@ require.config({
 			exports: 'colpick',
 			deps: ['jquery']
 		},
-		slider: {
+		nouislider: {
 			exports: 'noUiSlider',
 			deps: ['jquery']
 		},
