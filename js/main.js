@@ -65,12 +65,12 @@ require([
 				EL: 'theme-color',
 				type: 'background-color',
 				colorPicker: true,
-				effectedTarget: 'body'
+				effectedTarget: '.theme'
 			},
 			{	
 				EL: 'theme-pre-color',
 				type: 'background-color',
-				effectedTarget: 'body'
+				effectedTarget: '.theme'
 			},
 			{
 				EL: 'boxed',
@@ -84,14 +84,14 @@ require([
 				type: 'background'
 			},
 			{
-				EL: 'skinWidth',
+				EL: 'skin-width',
 				type: 'width',
 				effectedTarget: [],
 				range: [0, 1500],
 				start: 1000
 			},
 			{
-				EL: 'contentWidth',
+				EL: 'content-width',
 				type: 'width',
 				effectedTarget: [],
 				range: [0, 1400],
@@ -101,7 +101,7 @@ require([
 				EL: 'header-height',
 				type: 'height',
 				effectedTarget: '.navbar',
-				range: [0, 170],
+				range: [40, 170],
 				start: 100
 			},
 			{
@@ -113,9 +113,9 @@ require([
 				step: 1
 			},
 			{
-				EL: 'subtitleSize',
+				EL: 'subtitle-size',
 				type: 'font-size',
-				effectedTarget: '',
+				effectedTarget: '.sub-title',
 				range: [8, 16],
 				start: 14,
 				step: 1
@@ -124,82 +124,81 @@ require([
 				EL: 'title-color',
 				type: 'color',
 				colorPicker: true,
-				effectedTarget: ''
+				effectedTarget: '.title'
 			},
 			{
 				EL: 'subtitle-color',
 				colorPicker: true,
 				type: 'color',
-				effectedTarget: ''
+				effectedTarget: '.sub-title'
 			},
 			{
-				EL: 'titleFont',
+				EL: 'title-font',
 				type: 'font-family',
-				effectedTarget: ''
+				effectedTarget: '.title'
 			},
 			{
-				EL: 'subtitleFont',
+				EL: 'subtitle-font',
 				type: 'font-family',
-				effectedTarget: ''
+				effectedTarget: '.sub-title'
 			},
 			{
-				EL: 'bannerFontSize',
+				EL: 'banner-font-size',
 				type: 'font-size',
-				effectedTarget: '',
-				range: [8, 16],
-				start: 14,
+				effectedTarget: '.banner',
+				range: [15, 60],
+				start: 36,
 				step: 1
 			},
 			{
 				EL: 'banner-color',
 				type: 'color',
 				colorPicker: true,
-				effectedTarget: '.jumbotron'
+				effectedTarget: '.banner'
 			},
 			{
-				EL: 'bannerFont',
+				EL: 'banner-font',
 				type: 'font-family',
-				effectedTarget: ''
+				effectedTarget: '.banner'
 			},
 			// Container
 			{
-				EL: 'contentTileFontSize',
+				EL: 'content-tile-font-size',
 				type: 'font-size',
-				effectedTarget: '',
+				effectedTarget: '.content-tile',
+				range: [16, 36],
+				start: 16,
+				step: 1
+			},
+			{
+				EL: 'content-title-color',
+				type: 'color',
+				colorPicker: true,
+				effectedTarget: '.content-tile'
+			},
+			{
+				EL: 'content-font-size',
+				type: 'font-size',
+				effectedTarget: '.content',
 				range: [8, 16],
 				start: 14,
 				step: 1
 			},
 			{
-				EL: 'contentFontSize',
-				type: 'font-size',
-				effectedTarget: '',
-				range: [8, 16],
-				start: 14,
-				step: 1
+				EL: 'content-color',
+				type: 'color',
+				colorPicker: true,
+				effectedTarget: '.content'
 			},
 			{
-				EL: 'contentTitleFontSize',
-				type: 'font-size',
-				effectedTarget: '',
-				range: [8, 16],
-				start: 14,
-				step: 1
-			},
-			{
-				EL: 'contentColor',
-				type: 'background-color',
-				effectedTarget: ''
-			},
-			{
-				EL: 'contentTitleFont',
+				EL: 'content-title-font',
 				type: 'font-family',
-				effectedTarget: ''	
+				effectedTarget: '.content-tile'	
 			},
 			{
-				EL: 'contentFont',
+				EL: 'content-font',
 				type: 'font-family',
-				effectedTarget: ''
+				effectedTarget: '.content'
 			},
 			// Footer
 			{

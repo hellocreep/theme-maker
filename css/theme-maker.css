@@ -61,37 +61,41 @@
 }
 
 .pre-color-1 {
-	background: red;
+	background: #78d18b;
 }
 
 .pre-color-2 {
-	background: red;
+	background: #54ADB4;
 }
 
 .pre-color-3 {
-	background: red;
+	background: #C9C299;
 }
 
 .pre-color-4 {
-	background: red;
+	background: #707070;
 }
 
 .pre-color-5 {
-	background: red;
+	background: #C25283;
 }
 
 .pre-color-6 {
-	background: red;
+	background: #657383;
 }
 
 .pre-color-7 {
-	background: red;
+	background: #f96e5b;
 }
 
 .pre-color-8 {
-	background: red;
+	background: #9a86a2;
 }
 
 .pre-color-9 {
-	background: red;
+	background: #FEEB43;
+}
+
+.theme-icon {
+	font-size: 30px;
 }

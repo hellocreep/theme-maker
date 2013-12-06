@@ -1,0 +1,12 @@
+
+main.js
+----------------
+vendor/jquery-1.10.2.min.js
+vendor/underscore.js
+vendor/colpick.js
+vendor/jquery.nouislider.js
+vendor/jquery.icheck.js
+vendor/text.js
+text!tmpl/theme-maker.html
+modules/theme-maker.js
+main.js

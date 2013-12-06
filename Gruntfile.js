@@ -19,35 +19,11 @@ module.exports = function (grunt) {
            
         },
         connect: {
-            options: {
-                port: 9000,
-                livereload: 35729,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
-            },
-            livereload: {
+            server: {
                 options: {
-                    open: true,
-                    base: [
-                        '.tmp',
-                        '<%= yeoman.app %>'
-                    ]
-                }
-            },
-            test: {
-                options: {
-                    base: [
-                        '.tmp',
-                        'test',
-                        '<%= yeoman.app %>'
-                    ]
-                }
-            },
-            dist: {
-                options: {
-                    open: true,
-                    base: '<%= yeoman.dist %>',
-                    livereload: false
+                    base: '.',
+                    port: 9000,
+                    keepalive: true
                 }
             }
         },
@@ -175,4 +151,6 @@ module.exports = function (grunt) {
         'cssmin'
     ]);
 
+
+    grunt.registerTask('server', ['connect']);
 };
