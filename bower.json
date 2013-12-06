@@ -1,0 +1,15 @@
+{
+  "name": "out",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "nouislider": "~5.0.0",
+    "font-awesome": "~4.0.3",
+    "requirejs": "~2.1.9",
+    "jquery-icheck": "*",
+    "underscore": "1.5.2"
+  },
+  "devDependencies": {}
+}
