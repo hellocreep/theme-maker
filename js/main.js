@@ -10,6 +10,8 @@ require.config({
 		underscore: 'vendor/underscore',
 		icheck: 'vendor/jquery.icheck',
 		text: 'vendor/text',
+		carousel: 'vendor/carousel',
+		dropdown: 'vendor/dropdown',
 
 		/* Modules */
 		theme_maker: 'modules/theme-maker'
@@ -28,6 +30,14 @@ require.config({
 		},
 		icheck: {
 			exports: 'iCheck',
+			deps: ['jquery']
+		},
+		carousel: {
+			exports: 'carousel',
+			deps: ['jquery']
+		},
+		dropdown: {
+			exports: 'dropdown',
 			deps: ['jquery']
 		}
 	}

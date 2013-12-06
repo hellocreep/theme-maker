@@ -14,27 +14,9 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        // configurable paths
+        pkg: grunt.file.readJSON('package.json'),
         watch: {
-            compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server', 'autoprefixer']
-            },
-            styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['copy:styles', 'autoprefixer']
-            },
-            livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
-                files: [
-                    '<%= yeoman.app %>/*.html',
-                    '.tmp/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
-                ]
-            }
+           
         },
         connect: {
             options: {
@@ -69,18 +51,21 @@ module.exports = function (grunt) {
                 }
             }
         },
-        clean: {
-            dist: {
-                files: [{
-                    dot: true,
-                    src: [
-                        '.tmp',
-                        '<%= yeoman.dist %>/*',
-                        '!<%= yeoman.dist %>/.git*'
-                    ]
-                }]
+        concat: {
+            options: {
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> */',
             },
-            server: '.tmp'
+            dist: {
+                src: [
+                    'css/bootstrap.css',
+                    'css/font-awesome.css',
+                    'css/icheck.css',
+                    'css/colpick.css',
+                    'css/jquery.nouislider.css',
+                    'css/theme-maker.css'
+                ],
+                dest: 'css/main.css'
+            }
         },
         jshint: {
             options: {
@@ -115,73 +100,19 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        // not used since Uglify task does concat,
-        // but still available if needed
-        /*concat: {
-            dist: {}
-        },*/
-        // not enabled since usemin task does concat and uglify
-        // check index.html to edit your build targets
-        // enable this task if you prefer defining your build targets here
-        /*uglify: {
-            dist: {}
-        },*/
-        'bower-install': {
-            app: {
-                html: '<%= yeoman.app %>/index.html',
-                ignorePath: '<%= yeoman.app %>/'
-            }
-        },
-        imagemin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{gif,jpeg,jpg,png}',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
-            }
-        },
         cssmin: {
-            // This task is pre-configured if you do not wish to use Usemin
-            // blocks for your CSS. By default, the Usemin block from your
-            // `index.html` will take care of minification, e.g.
-            //
-            //     <!-- build:css({.tmp,app}) styles/main.css -->
-            //
-            // dist: {
-            //     files: {
-            //         '<%= yeoman.dist %>/styles/main.css': [
-            //             '.tmp/styles/{,*/}*.css',
-            //             '<%= yeoman.app %>/styles/{,*/}*.css'
-            //         ]
-            //     }
-            // }
+           options: {
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> */',
+            }, 
+            combine: {
+                files: {
+                    'css/main.min.css': ['css/main.css']
+                }
+            }
         },
         // Put files not handled in other tasks here
         copy: {
-            dist: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '<%= yeoman.dist %>',
-                    src: [
-                        '*.{ico,png,txt}',
-                        '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
-                    ]
-                }]
-            },
-            styles: {
-                expand: true,
-                dot: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: '.tmp/styles/',
-                src: '{,*/}*.css'
-            }
+            
         },
         requirejs: {
             compile: {
@@ -197,27 +128,35 @@ module.exports = function (grunt) {
                         underscore: 'vendor/underscore',
                         icheck: 'vendor/jquery.icheck',
                         text: 'vendor/text',
+                        carousel: 'vendor/carousel',
+                        dropdown: 'vendor/dropdown',
 
                         /* Modules */
                         theme_maker: 'modules/theme-maker'
                     },
                     shim: {
-                       shim: {
-                            colpick: {
-                                exports: 'colpick',
-                                deps: ['jquery']
-                            },
-                            nouislider: {
-                                exports: 'noUiSlider',
-                                deps: ['jquery']
-                            },
-                            underscore: {
-                                exports: '_'
-                            },
-                            icheck: {
-                                exports: 'iCheck',
-                                deps: ['jquery']
-                            }
+                        colpick: {
+                            exports: 'colpick',
+                            deps: ['jquery']
+                        },
+                        nouislider: {
+                            exports: 'noUiSlider',
+                            deps: ['jquery']
+                        },
+                        underscore: {
+                            exports: '_'
+                        },
+                        icheck: {
+                            exports: 'iCheck',
+                            deps: ['jquery']
+                        },
+                        carousel: {
+                            exports: 'carousel',
+                            deps: ['jquery']
+                        },
+                        dropdown: {
+                            exports: 'dropdown',
+                            deps: ['jquery']
                         }
                     },
                     modules: [
@@ -251,7 +190,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', [
-        'clean:server',
         'concurrent:test',
         'autoprefixer',
         'connect:test',
@@ -259,7 +197,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'clean:dist',
         'concurrent:dist',
         'autoprefixer',
         'concat',

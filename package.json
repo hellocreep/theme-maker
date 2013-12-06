@@ -1,6 +1,6 @@
 {
-  "name": "out",
-  "version": "0.0.0",
+  "name": "theme-maker",
+  "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
