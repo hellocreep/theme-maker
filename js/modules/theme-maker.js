@@ -52,7 +52,6 @@ define([
 				case 'font':
 					break;
 				case 'font-size':
-					// _this.renderFontSize(item);
 					_this.renderSize(item);
 					break;
 				case 'font-family':
@@ -100,20 +99,6 @@ define([
 			});
 		}
 	};
-
-	// ThemeMaker.prototype.renderFontSize = function(opts) {
-	// 	var _this = this,
-	// 		attrs = {};
-	// 	_this._showSlider({
-	// 		target: '.' + opts.EL,
-	// 		range: opts.range,
-	// 		start: opts.start,
-	// 		cb: function(val) {
-	// 			attrs[opts.type] = val;
-	// 			_this._change(opts.effectedTarget, attrs);
-	// 		}
-	// 	});
-	// };
 
 	ThemeMaker.prototype.renderColor = function(opts) {
 		var _this = this,
