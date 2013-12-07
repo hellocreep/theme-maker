@@ -10,8 +10,7 @@ require.config({
 		underscore: 'vendor/underscore',
 		icheck: 'vendor/jquery.icheck',
 		text: 'vendor/text',
-		carousel: 'vendor/carousel',
-		dropdown: 'vendor/dropdown',
+		bootstrap: 'vendor/bootstrap.min',
 
 		/* Modules */
 		theme_maker: 'modules/theme-maker'
@@ -32,20 +31,17 @@ require.config({
 			exports: 'iCheck',
 			deps: ['jquery']
 		},
-		carousel: {
-			exports: 'carousel',
-			deps: ['jquery']
-		},
-		dropdown: {
-			exports: 'dropdown',
+		bootstrap: {
+			exports: 'bootstrap',
 			deps: ['jquery']
 		}
 	}
 });
 
 require([
-	'theme_maker'
-],function(ThemeMaker) {
+	'theme_maker',
+	'bootstrap'
+],function(ThemeMaker, bootstrap) {
 
 	var themeMaker = new ThemeMaker({
 		themeElements: [
@@ -251,5 +247,6 @@ require([
 	});
 
 	themeMaker.trigger();
+
 
 });

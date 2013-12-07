@@ -9,4 +9,5 @@ vendor/jquery.icheck.js
 vendor/text.js
 text!tmpl/theme-maker.html
 modules/theme-maker.js
+vendor/bootstrap.min.js
 main.js

@@ -55,6 +55,7 @@ define([
 					_this.renderSize(item);
 					break;
 				case 'font-family':
+					_this.renderFontFamily(item);
 					break;
 				case 'background':
 					break;
@@ -148,6 +149,17 @@ define([
 				attrs[opts.type] = 'none';
 			}
 			_this._change(e.currentTarget.value, attrs);
+		});
+	};
+
+	ThemeMaker.prototype.renderFontFamily = function(opts) {
+		var _this = this,
+			$themeContent = _this.conf.$themeContent,
+			attrs = {};
+		$themeContent.find('.'+opts.EL).on('change', function() {
+			var $this = $(this);
+			attrs[opts.type] = $this.val();
+			_this._change(opts.effectedTarget, attrs);
 		});
 	};
 

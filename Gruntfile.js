@@ -104,8 +104,7 @@ module.exports = function (grunt) {
                         underscore: 'vendor/underscore',
                         icheck: 'vendor/jquery.icheck',
                         text: 'vendor/text',
-                        carousel: 'vendor/carousel',
-                        dropdown: 'vendor/dropdown',
+                        bootstrap: 'vendor/bootstrap.min',
 
                         /* Modules */
                         theme_maker: 'modules/theme-maker'
@@ -126,19 +125,15 @@ module.exports = function (grunt) {
                             exports: 'iCheck',
                             deps: ['jquery']
                         },
-                        carousel: {
-                            exports: 'carousel',
-                            deps: ['jquery']
-                        },
-                        dropdown: {
-                            exports: 'dropdown',
+                        bootstrap: {
+                            exports: 'bootstrap',
                             deps: ['jquery']
                         }
                     },
                     modules: [
                         {
                             name: 'main',
-                            include: ['theme_maker']
+                            include: ['theme_maker', 'bootstrap']
                         }
                     ]
                 }

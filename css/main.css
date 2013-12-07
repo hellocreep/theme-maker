@@ -1,4 +1,4 @@
-/*! theme-maker - v0.0.1 - 2013-12-06 *//*!
+/*! theme-maker - v0.0.1 - 2013-12-07 *//*!
  * Bootstrap v3.0.2 by @fat and @mdo
  * Copyright 2013 Twitter, Inc.
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
@@ -8519,6 +8519,7 @@ colpick Color Picker / colpick.com
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	z-index: 100;
 }
 /*Color selection box*/
 .colpick_color {
@@ -9083,6 +9084,7 @@ colpick Color Picker / colpick.com
 	width: 300px;
 	top: 5px;
 	left: -300px;
+	z-index: 99;
 }
 
 .theme-maker-content {
@@ -9178,4 +9180,8 @@ colpick Color Picker / colpick.com
 
 .theme-icon {
 	font-size: 30px;
+}
+
+select {
+	width: 150px;
 }

@@ -3,6 +3,7 @@
 	width: 300px;
 	top: 5px;
 	left: -300px;
+	z-index: 99;
 }
 
 .theme-maker-content {
@@ -98,4 +99,8 @@
 
 .theme-icon {
 	font-size: 30px;
+}
+
+select {
+	width: 150px;
 }
