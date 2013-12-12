@@ -49,15 +49,13 @@ define([
 				case 'color':
 					_this.renderColor(item);
 					break;
-				case 'font':
-					break;
 				case 'font-size':
 					_this.renderSize(item);
 					break;
 				case 'font-family':
 					_this.renderFontFamily(item);
 					break;
-				case 'background':
+				case 'background-image':
 					break;
 				case 'background-color':
 					_this.renderColor(item);

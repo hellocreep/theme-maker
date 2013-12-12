@@ -77,7 +77,7 @@ require([
 			},
 			{
 				EL: 'patterns',
-				type: 'background'
+				type: 'background-image'
 			},
 			{
 				EL: 'skin-width',
@@ -198,40 +198,42 @@ require([
 			},
 			// Footer
 			{
-				EL: 'footerTileSize',
+				EL: 'footer-tile-font-size',
 				type: 'font-size',
-				effectedTarget: '',
+				effectedTarget: 'footer h3',
 				range: [8, 16],
 				start: 14,
 				step: 1
 			},
 			{
-				EL: 'footerFontSize',
+				EL: 'footer-font-size',
 				type: 'font-size',
-				effectedTarget: '',
+				effectedTarget: 'footer p',
 				range: [8, 16],
 				start: 14,
 				step: 1
 			},
 			{
-				EL: 'footerTileColor',
+				EL: 'footer-tile-color',
 				type: 'color',
-				effectedTarget: ''
+				colorPicker: true,
+				effectedTarget: 'footer h3'
 			},
 			{
-				EL: 'footerContentColor',
+				EL: 'footer-content-color',
 				type: 'color',
-				effectedTarget: ''
+				colorPicker: true,
+				effectedTarget: 'footer p'
 			},
 			{
-				EL: 'footerTileFont',
+				EL: 'footer-tile-font',
 				type: 'font-family',
-				effectedTarget: ''
+				effectedTarget: 'footer h3'
 			},
 			{
-				EL: 'footerContentFont',
+				EL: 'footer-content-font',
 				type: 'font-family',
-				effectedTarget: ''
+				effectedTarget: 'footer p'
 			},
 			// DNN Tokends
 			{
